@@ -7,7 +7,7 @@ const router = Router();
 router.get("/", async (req, res) => {
   try {
     const tarefas = await models.Tarefa.findAll();
-    return res.json(tarefas);
+    return res.json({ results: tarefas });
   } catch (err) {
     console.error("Erro ao buscar tarefas:", err);
     return res.status(500).json({ error: "Erro interno do servidor" });

@@ -35,9 +35,10 @@ app.use(async (req, res, next) => {
 
 app.use("/", routes.root);
 app.use("/session", routes.session);
-app.use("/users", routes.user);
+// app.use("/users", routes.user);
 app.use("/messages", routes.message);
 app.use("/tarefas", routes.tarefa);
+app.use("/auth", routes.auth);
 
 const port = process.env.PORT ?? 3000;
 

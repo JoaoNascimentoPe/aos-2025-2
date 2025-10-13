@@ -22,7 +22,7 @@ const getUserModel = (sequelize, { DataTypes }) => {
       validate: {
         notEmpty: true,
       },
-    }
+    },
   });
 
   User.associate = (models) => {
